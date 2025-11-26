@@ -1,0 +1,134 @@
+/* CSS Variables */
+:root {
+    --backgroundcolor: #fffcf7;
+    --maincolor: #1ebce6;
+    --defaultgray: #888;
+}
+
+/* 1. Reset and Font */
+html {
+    height: 100%;
+}
+
+body {
+    /* Use a standard, high-contrast system font */
+    font-family: "Roboto Mono", "Courier New", monospace;
+    color: #000; /* Pure black text */
+    background-color: var(--backgroundcolor); /* Pure white background */
+    line-height: 1.6; /* Good readability */
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 2. Content Constraints (The Key to the Minimal Look) */
+.container {
+    /* Center the content and keep it narrow like the example site */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Make links stand out */
+a {
+    color: inherit; /* A standard, professional blue */
+    text-decoration: none;
+    border-bottom: 2px solid var(--maincolor);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 4. Timeline Spacing (Crucial for the Blog Feed) */
+/* Assuming you wrap each post list item in an <article> tag */
+.timeline-item {
+    margin-bottom: 30px;
+}
+
+/* You can target specific elements like the date for the smaller, subtle look */
+.timeline-item h3 {
+    font-size: 0.9em;
+    color: #555; /* Subtle grey for dates */
+    margin-bottom: 5px;
+}
+
+/* Add a horizontal rule for separation */
+hr {
+    border: 0;
+    border-top: 1px solid #eee; /* Very light separator */
+    margin: 20px 0;
+}
+
+/* ------------Header------------ */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1,
+header nav,
+header nav a {
+    font-weight: 200;
+}
+
+header nav {
+    display: flex;
+    gap: 10px;
+}
+
+/* ------------Posts List------------ */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+li::before {
+    content: "# ";
+    color: var(--maincolor);
+    font-weight: 700;
+}
+
+.post-title {
+    font-weight: 700;
+}
+
+.post-date {
+    color: var(--defaultgray);
+    display: inline;
+}
+
+.post-peek {
+    margin: 0;
+    padding: 0;
+}
+
+.post-link {
+    color: var(--defaultgray);
+    display: inline;
+}
+
+/* ------------Footer------------ */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: auto;
+    color: var(--defaultgray);
+}
