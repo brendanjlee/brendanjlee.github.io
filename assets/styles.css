@@ -88,6 +88,10 @@ header nav {
     gap: 10px;
 }
 
+.landing-page {
+    padding-bottom: 3.5rem;
+}
+
 /* ------------Posts List------------ */
 ul {
     margin: 0;
@@ -96,8 +100,7 @@ ul {
 }
 
 li {
-    padding-top: 1rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 2.5rem;
 }
 
 li::before {
@@ -125,8 +128,15 @@ li::before {
     display: inline;
 }
 
+.post-header {
+    font-weight: 300;
+}
+
 /* ------------Footer------------ */
 footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
     text-align: center;
     padding: 2rem 0;
     margin-top: auto;
